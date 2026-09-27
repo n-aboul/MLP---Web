@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;
+}
+
+body {
+    background-image: url('https://svs.gsfc.nasa.gov/vis/a010000/a014800/a014866/TESS_Southern_Sky_Sector_12_desktop.jpg') !important;
+    margin: 0;
+    min-height: 100vh;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background Image */
+.bg-img {
+    width: 100%;
+    min-height: 100vh;
+    background-color: beige;
+    /* background-image: url('./Images/moonnn.png'); */
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+
+/* Logo */
+.logouno img {
+    width: 300px;
+    height: 120px;
+    display: block;
+}
+
+.logodos img {
+    width: 300px;
+    height: 140px;
+    display: none;
+}
+
+.logocontainter:hover .logouno img {
+    display: none;
+    transition-duration: 5s;
+    transition-delay: 3s;
+    transition: 0.3 ease-in;
+}
+
+.logocontainter:hover .logodos img {
+    transition-delay: 3s;
+    display: block;
+}
+
+/* Navigation Bar */
+.navbar {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: rgb(60, 71, 87);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 1.0);
+    padding: 15px 30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navlinks {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #a0a0a0;
+    display: flex;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    background-color: #ffff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.navbar a:hover {
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    font-size: 30px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* Content */
+.content {
+    text-align: center;
+    padding: top, bottom 10px;
+    line-height: 1em;
+    justify-content: center;
+    color: #a0a0a0;
+}
+
+.content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 70px;
+    line-height: 1em;
+    animation-delay: .25s;
+}
+
+.content p {
+    animation-delay: .5s;
+    font-size: 25px;
+    line-height: 1em;
+}
+
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Images */
+.content .img-one img {
+    float: left;
+    border: 0px;
+    margin-right: 5px;
+    height: 750px;
+    width: 250px;
+    animation-delay: 5s;
+}
+
+.content .img-two img {
+    float: right;
+    border: 0px;
+    margin-left: 5px;
+    height: 750px;
+    width: 250px;
+    animation-delay: 5s;
+    padding-right: 0;
+}
+
+.wrap {
+    margin: 150px auto;
+    width: 100%;
+}
+
+.content .border {
+    background-color: red;
+}
